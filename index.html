@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LanguageHub — Learn & Teach Languages</title>
+  <meta name="description" content="Learn Malay, Pashto, English, Thai, Arabic, Nigerian languages and more. Book online classes, earn/spend coins, and browse free resources.">
+  <meta name="keywords" content="language learning, online classes, Malay, Pashto, Arabic, Thai, Hausa, English tutoring">
+  <meta name="author" content="LanguageHub">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%233b82f6' d='M4 7c0-1.657 1.343-3 3-3h10c1.657 0 3 1.343 3 3v4.5a6.5 6.5 0 1 1-2-4.6V7c0-.552-.448-1-1-1H7c-.552 0-1 .448-1 1v10c0 .552.448 1 1 1h3.5a1 1 0 1 1 0 2H7a3 3 0 0 1-3-3V7Z'/%3E%3C/svg%3E">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="LanguageHub — Learn & Teach Languages">
+  <meta property="og:description" content="Book online language classes, explore free resources, and connect with native speakers.">
+  <meta property="og:type" content="website">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ================= Header / Nav ================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="#home" data-link aria-label="LanguageHub home">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 7c0-1.657 1.343-3 3-3h10c1.657 0 3 1.343 3 3v4.5a6.5 6.5 0 1 1-2-4.6V7c0-.552-.448-1-1-1H7c-.552 0-1 .448-1 1v10c0 .552.448 1 1 1h3.5a1 1 0 1 1 0 2H7a3 3 0 0 1-3-3V7Z" fill="currentColor"/>
+        </svg>
+        <span>LanguageHub</span>
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="nav-menu" aria-label="Primary">
+        <a href="#home" data-link>Home</a>
+        <a href="#teachers" data-link>Teachers</a>
+        <a href="#classes" data-link>Classes</a>
+        <a href="#resources" data-link>Resources</a>
+        <a href="#about" data-link>About</a>
+        <a href="#contact" data-link>Contact</a>
+      </nav>
+      
+      <div class="wallet" aria-label="Wallet">
+        <span class="badge" title="Your coins balance" aria-live="polite">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 12c0-3.866 4.03-7 9-7s9 3.134 9 7-4.03 7-9 7-9-3.134-9-7Zm9-5c-4.411 0-8 2.239-8 5s3.589 5 8 5 8-2.239 8-5-3.589-5-8-5Zm-1 3a1 1 0 1 1 2 0v1h2a1 1 0 1 1 0 2h-2v1a1 1 0 1 1-2 0v-1H9a1 1 0 1 1 0-2h2V10Z" fill="currentColor"/>
+          </svg>
+          <strong id="coinCount">0</strong> coins
+        </span>
+        <button class="btn small" id="buyCoinsBtn" type="button" title="Buy Coins">Buy Coins</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Router Views ================= -->
+  <main class="container">
+    <!-- Home -->
+    <section id="view-home" data-view>
+      <div class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">New Platform Launch</div>
+          <h1>Learn Any <span class="highlight">Language</span> From Native Speakers</h1>
+          <p>Connect with expert teachers worldwide. Book live classes, access free resources, and master new languages at your own pace.</p>
+          <div class="actions">
+            <a href="#teachers" class="btn primary" data-link>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              Find a Teacher
+            </a>
+            <a href="#resources" class="btn secondary" data-link>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+              Free Resources
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card" aria-hidden="true">
+            <img src="busuu-header-hello.png" alt="Learning illustration" loading="lazy">
+          </div>
+          <div class="hero-float stats">
+            <strong>500+</strong>
+            <span>Active Learners</span>
+          </div>
+          <div class="hero-float rating">
+            ⭐ 4.9 Rating
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats-section">
+        <div class="stat-item">
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Languages</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Expert Teachers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Free Resources</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Online Classes</div>
+        </div>
+      </div>
+      
+      <!-- Featured Teachers -->
+      <div class="section-header">
+        <h2>Meet Our Teachers</h2>
+        <p>Learn from passionate native speakers who make language learning enjoyable and effective</p>
+      </div>
+      <div class="grid" id="homeTeacherGrid"></div>
+    </section>
+
+    <!-- Teachers -->
+    <section id="view-teachers" class="hide" data-view>
+      <header style="display:flex; align-items:end; justify-content:space-between; gap: 12px; margin-bottom: 8px;">
+        <h2>All teachers</h2>
+        <div style="display:flex; gap: 10px; align-items:center;">
+          <label>
+            <span class="muted" style="font-size:12px;">Filter by language</span>
+            <select id="langFilter" aria-label="Filter teachers by language"></select>
+          </label>
+          <label>
+            <span class="muted" style="font-size:12px;">Sort</span>
+            <select id="sortTeachers" aria-label="Sort teachers">
+              <option value="rating">Rating</option>
+              <option value="fee">Price</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+      </header>
+      <div class="grid" id="teacherGrid"></div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="testimonial-section fade-in-section">
+      <div class="section-header">
+        <h2>What Our Learners Say</h2>
+        <p>Real stories from real students achieving their language goals</p>
+      </div>
+
+      <!-- Testimonials -->
+      <div id="testimonialGrid" class="grid">
+        <article class="card">
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <img class="avatar" src="downloa44d (1).jpg" alt="Photo of Aisha" width="64" height="64">
+            <div>
+              <div style="display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:8px;">
+                <h3 style="margin:0; font-size:1.1rem; font-weight:700;">Aisha Rahman</h3>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="muted" style="margin:0 0 8px 0; line-height:1.6;">"I started as a complete beginner. In 6 weeks I can hold simple conversations! The teacher was patient and the activities were fun."</p>
+              <div style="display:flex; gap:8px;">
+                <span class="tag">Beginner</span>
+                <span class="tag success">Malay</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <img class="avatar" src="images (1).jpg" alt="Photo of Daniel" width="64" height="64">
+            <div>
+              <div style="display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:8px;">
+                <h3 style="margin:0; font-size:1.1rem; font-weight:700;">Daniel Khoo</h3>
+                <span class="stars">★★★★☆</span>
+              </div>
+              <p class="muted" style="margin:0 0 8px 0; line-height:1.6;">"Loved the bite-sized lessons and weekly feedback. The speaking drills boosted my confidence a lot."</p>
+              <div style="display:flex; gap:8px;">
+                <span class="tag">Intermediate</span>
+                <span class="tag success">English</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <img class="avatar" src="downl7887oad.jpg" alt="Photo of Nurul" width="64" height="64">
+            <div>
+              <div style="display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:8px;">
+                <h3 style="margin:0; font-size:1.1rem; font-weight:700;">Nurul Fatihah</h3>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="muted" style="margin:0 0 8px 0; line-height:1.6;">"Clear structure, friendly teachers, and lots of practice. I improved my writing and speaking in a month."</p>
+              <div style="display:flex; gap:8px;">
+                <span class="tag">Advanced</span>
+                <span class="tag success">Bahasa Melayu</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="fade-in-section">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Start your language journey in 4 simple steps</p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="card feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>1. Set Your Goals</h3>
+          <p>Take a quick assessment and tell us what you want to achieve</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon">👨‍🏫</div>
+          <h3>2. Choose a Teacher</h3>
+          <p>Browse our verified teachers and find your perfect match</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>3. Book Classes</h3>
+          <p>Schedule lessons at times that work for your lifestyle</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>4. Track Progress</h3>
+          <p>Get feedback, earn certificates, and celebrate milestones</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshot gallery -->
+    <section class="fade-in-section">
+      <div class="section-header">
+        <h2>Inside Our Classes</h2>
+        <p>See what learning looks like on LanguageHub</p>
+      </div>
+      <div class="grid" id="screenshotGrid">
+        <div class="media"><img src="Screenshot 2025-08-31 161150.png" alt="Beginner speaking game" loading="lazy"></div>
+      
+        <div class="media"><img src="Screenshot 2025-09-01 153337.png" alt="Group lesson practice" loading="lazy"></div>
+        <div class="media"><img src="Screenshot 2025-09-01 154129.png" alt="Writing feedback" loading="lazy"></div>
+      </div>
+
+      <!-- Lightbox -->
+      <dialog id="shotModal" aria-label="Screenshot viewer">
+        <button type="button" id="shotClose" class="btn small ghost" style="position:absolute; right:12px; top:12px;">✕ Close</button>
+        <figure style="margin:0;">
+          <img id="shotModalImg" alt="Expanded screenshot" style="display:block; width:100%; height:auto;">
+          <figcaption id="shotModalCaption" class="muted" style="padding:12px 16px;"></figcaption>
+        </figure>
+      </dialog>
+    </section>
+
+    <!-- Classes (My bookings) -->
+    <section id="view-classes" class="hide" data-view>
+      <h2>My classes</h2>
+      <p class="muted">All your booked lessons appear here. You can join at the scheduled time.</p>
+      <div id="classesEmpty" class="card">No classes yet — go to <a href="#teachers" data-link>Teachers</a> to book one.</div>
+      <div id="classesTableWrap" class="hide" aria-live="polite">
+        <table class="table" aria-label="Booked classes">
+          <thead>
+            <tr><th>Teacher</th><th>Language</th><th>Date</th><th>Duration</th><th>Fee</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="classesTbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="view-resources" class="hide" data-view>
+      <header style="display:flex; align-items:end; justify-content:space-between; gap: 12px; margin-bottom: 8px;">
+        <h2>Free resources</h2>
+        <div class="filters">
+          <label>
+            <span class="muted" style="font-size:12px;">Language</span>
+            <select id="resLang" aria-label="Filter resources by language"></select>
+          </label>
+          <label>
+            <span class="muted" style="font-size:12px;">Type</span>
+            <select id="resType" aria-label="Filter resources by type">
+              <option value="all">All</option>
+              <option value="pdf">PDF</option>
+              <option value="video">Video</option>
+              <option value="site">Website</option>
+            </select>
+          </label>
+        </div>
+      </header>
+      <div class="grid" id="resourceGrid"></div>
+    </section>
+
+    <!-- About -->
+    <section id="view-about" class="hide" data-view>
+      <h2>About LanguageHub</h2>
+      <div class="card">
+        <p>LanguageHub is a simple, global platform where anyone can learn or teach languages. Students book live online lessons, teachers set their prices, and both can use a coin system to earn or spend access to classes and premium content. We also publish free learning resources.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="view-contact" class="hide" data-view>
+      <h2>Contact Us</h2>
+      <p>Please fill out the form below to get in touch.</p>
+
+      <form id="contactForm" action="https://script.google.com/macros/s/AKfycbyQfUAsIG1MBzk2kkLOUB76tsrbVV32paq6hDZYdZEuwsQipNqaMW_x9q4oUNgxBT2IBQ/exec" method="POST">
+        <div>
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+        </div>
+
+        <div>
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+        </div>
+
+        <div>
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+        </div>
+
+        <div>
+          <label for="message" class="form-label">Additional Information</label>
+          <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter any additional information or comments" required></textarea>
+        </div>
+
+        <button type="submit" class="btn primary">Submit</button>
+      </form>
+
+      <div id="successMessage" style="display: none;">
+        ✅ Thank you! Your response has been recorded.
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a class="logo" href="#home">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 7c0-1.657 1.343-3 3-3h10c1.657 0 3 1.343 3 3v4.5a6.5 6.5 0 1 1-2-4.6V7c0-.552-.448-1-1-1H7c-.552 0-1 .448-1 1v10c0 .552.448 1 1 1h3.5a1 1 0 1 1 0 2H7a3 3 0 0 1-3-3V7Z" fill="currentColor"/>
+            </svg>
+            <span>LanguageHub</span>
+          </a>
+          <p style="margin-top:16px;">Connect with native speakers and master new languages. Your journey to fluency starts here.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#teachers">Find Teachers</a></li>
+            <li><a href="#resources">Free Resources</a></li>
+            <li><a href="#classes">My Classes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Languages</h4>
+          <ul>
+            <li><a href="#teachers">Malay</a></li>
+            <li><a href="#teachers">Arabic</a></li>
+            <li><a href="#teachers">Pashto</a></li>
+            <li><a href="#teachers">Thai</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> LanguageHub. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Booking Modal ================= -->
+  <dialog id="bookingDialog" aria-labelledby="bookingTitle">
+    <form method="dialog" class="modal-card">
+      <header>
+        <h3 id="bookingTitle">Book Class</h3>
+      </header>
+      <div class="body">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <label> Date &amp; Time
+            <input type="datetime-local" id="slotInput" required>
+          </label>
+          <label> Duration
+            <select id="durationInput">
+              <option value="30">30 min</option>
+              <option value="60" selected>60 min</option>
+              <option value="90">90 min</option>
+            </select>
+          </label>
+        </div>
+        <p class="muted">Fee: <strong><span id="feeLabel">20</span> coins</strong></p>
+      </div>
+      <footer>
+        <button class="btn" value="cancel" type="submit">Cancel</button>
+        <button class="btn primary" value="confirm" type="submit">Confirm Booking</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- ================= Resource Preview Modal ================= -->
+  <dialog id="resourceDialog" aria-labelledby="resourceTitle">
+    <form method="dialog" class="modal-card" style="max-width: 100%;">
+      <header>
+        <h3 id="resourceTitle">Preview</h3>
+      </header>
+      <div class="body">
+        <div id="resourcePreview" style="height: 60vh; width: 100%; display:flex; align-items:center; justify-content:center; background:#f8fafc; border:1px solid var(--line); border-radius: 12px; overflow:hidden;"></div>
+        <p class="muted" id="resourceNote" style="margin-top:8px;">If the preview is blocked, use Open to view in a new tab.</p>
+      </div>
+      <footer>
+        <a id="resourceOpenBtn" class="btn" href="#" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+        <button class="btn" value="cancel" type="submit">Close</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- ================= Coin Purchase Modal ================= -->
+  <div id="coinPurchaseModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(15,23,42,0.8); justify-content:center; align-items:center; z-index:1000; backdrop-filter:blur(8px);">
+    <div style="background:white; padding:32px; border-radius:20px; max-width:420px; text-align:center; box-shadow: 0 25px 50px rgba(0,0,0,.25);">
+      <h2 style="font-size:1.75rem; margin-bottom:8px;">💰 Buy Coins</h2>
+      <div class="price-tag" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff); display:inline-block; padding:10px 24px; border-radius:999px; font-weight:700; color:#4f46e5; margin-bottom:24px; font-size:1.1rem;">100 Coins = RM 5</div>
+
+      <h3 style="font-size:1rem; margin:20px 0 12px; color:#1e293b;">Pay with Touch 'n Go</h3>
+      <img src="QR-code-v2.jpg" alt="TNG QR Code" style="width:160px; margin:0 auto 20px; border:2px solid #e2e8f0; border-radius:16px; display:block; box-shadow:0 4px 12px rgba(0,0,0,.1);">
+
+      <h3 style="font-size:1rem; margin:20px 0 12px; color:#1e293b;">Bank Transfer</h3>
+      <div style="background:#f8fafc; padding:16px 20px; border-radius:12px; text-align:left; margin-bottom:24px;">
+        <p style="margin:4px 0; color:#64748b; font-size:0.9rem;"><strong style="color:#1e293b;">Bank:</strong> Maybank</p>
+        <p style="margin:4px 0; color:#64748b; font-size:0.9rem;"><strong style="color:#1e293b;">Account:</strong> 1234567890</p>
+        <p style="margin:4px 0; color:#64748b; font-size:0.9rem;"><strong style="color:#1e293b;">Name:</strong> LanguageHub Account</p>
+      </div>
+
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="confirmPurchase()" class="btn primary" style="flex:1;">✓ I Have Paid</button>
+        <button onclick="closePurchase()" class="btn ghost" style="flex:1;">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
